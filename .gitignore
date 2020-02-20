@@ -1,7 +1,7 @@
 .idea
-*.iml
-out
-gen
 node_modules/
 dist/
 package-lock.json/
+lsp/
+.gulp-scss-cache/
+debug.log
