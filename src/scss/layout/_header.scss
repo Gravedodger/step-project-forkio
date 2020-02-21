@@ -1,0 +1,34 @@
+@import "src/scss/mixins";
+@import "src/scss/components/buttons";
+
+.header {
+
+
+  &__intro {
+    width: 100%;
+    height: 718px;
+    background-image: url("src/dist/images-minified/bg-main-laptop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &__text {
+      @include flex-between-center-column;
+    }
+}
+
+}
+//  &-title {
+//    font-size: 35px;
+//    text-align: center;
+//    text-transform: capitalize;
+//  }
+//  &-slogan {
+//    width: 258px;
+//    height: 52px;
+//    font-size: 13px;
+//  }
+//  &-sub-title {
+//
+//  }
+//}

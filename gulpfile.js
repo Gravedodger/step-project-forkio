@@ -17,10 +17,7 @@ function styles() {
     return gulp.src(scssFiles).
     pipe(concat('main.css')).
     pipe(sass()).
-    pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    })).
+    pipe(autoprefixer()).
     pipe(cleanCSS({
         level: 2
     })).
@@ -70,7 +67,8 @@ gulp.task('scripts', scripts);
 gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('imageSquash', imageSquash);
-gulp.task('watch', () => {gulp.watch('./src/img/**/*.{jpeg, png, svg}', imageSquash)});
-gulp.task('default', gulp.series('imageSquash', 'watch'));
-gulp.task('build', gulp.series(clean, gulp.parallel(styles,scripts)));
+// gulp.task('watch', () => {
+//     gulp.watch('./src/img/**/*.{jpeg, png, svg}', imageSquash);
+// });
+gulp.task('build', gulp.series(clean, imageSquash, gulp.parallel(styles,scripts)));
 gulp.task('dev', gulp.series('build', 'watch'));
