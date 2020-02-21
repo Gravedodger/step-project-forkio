@@ -1,34 +1,55 @@
+@import "src/scss/variables";
 @import "src/scss/mixins";
 @import "src/scss/components/buttons";
 
+
 .header {
 
-
   &__intro {
+    @include flex-between-center-column;
+    position: relative;
     width: 100%;
-    height: 718px;
-    background-image: url("src/dist/images-minified/bg-main-laptop.png");
-    background-repeat: no-repeat;
-    background-position: center center;
+    min-height: 500px;
+    background: url("../dist/images--optimized/bg-main-laptop.png") no-repeat 50% 50%;
     background-size: cover;
 
     &__text {
       @include flex-between-center-column;
+      padding-top: 43px;
+      font-family: $font-primary;
+      color: $color__general--white;
+      text-align: center;
+
+      &__title {
+        padding-bottom: 20px;
+        font-size: 47px;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      &__slogan {
+        width: 258px;
+        height: 52px;
+        font-size: 17px;
+        color: $color__primary--purple-light;
+        line-height: 30px;
+      }
+
+      &__subTitle {
+        text-transform: uppercase;
+        font-size: 13px;
+        color: $color__letters--gray-dark;
+        padding-top: 20px;
+      }
     }
+  }
 }
 
+.btn__purple--downloadNow {
+  position: relative;
+  top: 21px;
 }
-//  &-title {
-//    font-size: 35px;
-//    text-align: center;
-//    text-transform: capitalize;
-//  }
-//  &-slogan {
-//    width: 258px;
-//    height: 52px;
-//    font-size: 13px;
-//  }
-//  &-sub-title {
-//
-//  }
-//}
+
+
+
+

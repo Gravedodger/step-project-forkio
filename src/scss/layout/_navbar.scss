@@ -4,26 +4,25 @@
 @import "src/scss/components/buttons";
 @import "src/scss/components/menu__hamburger--dropdown";
 
+
 .nav {
   @media (min-width: $mobile) {
-    height: 103px;
+    min-width: 320px;
+    min-height: 103px;
     padding: 0 16px;
   }
   @media (min-width: $tablet) {
-    height: 118px;
+    min-width: 768px;
+    min-height: 118px;
     padding: 22px 20px;
   }
   @media (min-width: $desktop) {
+    min-width: 1200px;
     padding: 0 90px;
   }
 
   @include flex-center-space-around;
-  //position: fixed;
-  //top: 0;
-  //right: 0;
-  //left: 0;
-  //margin: 0;
-  color: $color-white;
+  color: $color__general--white;
   background-color: #27262a;
   text-transform: capitalize;
   z-index: 1000;
@@ -63,19 +62,17 @@
     display: block;
     padding: 31px 33px;
     font: 19px $font-primary;
-    color: $color-white;
+    color: $color__general--white;
     text-transform: capitalize;
     border: 1px solid #3b3b3b;
 
     &:hover {
       display: block;
-      color: $color-purple--light;
+      color: $color__primary--purple-light;
     }
   }
 
 }
-
-
 
 
 

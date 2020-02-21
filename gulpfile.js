@@ -9,6 +9,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
+
 const scssFiles = ['./src/scss/**/*.scss'];
 const jsFiles = ['./src/js/**/*.js'];
 
@@ -21,7 +22,7 @@ function styles() {
     pipe(cleanCSS({
         level: 2
     })).
-    pipe(gulp.dest('./src/dist')).
+    pipe(gulp.dest('./dist')).
     pipe(browserSync.stream());
 }
 
@@ -32,16 +33,17 @@ function scripts() {
     pipe(uglify({
         toplevel: true
     })).
-    pipe(gulp.dest('./src/dist')).
+    pipe(gulp.dest('./dist')).
     pipe(browserSync.stream());
 }
 
 
-function imageSquash() {
-    return gulp.src('./src/img/**/*.{png, svg, jpeg}').
-    pipe(imagemin()).
-    pipe(gulp.dest('./src/dist/images-minified')).
-    pipe(browserSync.stream());
+function image() {
+    return gulp.src('./src/img/**/*')
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('./dist/images--optimized'));
 }
 
 
@@ -64,11 +66,8 @@ function watch() {
 
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
+gulp.task('imagemin', image);
 gulp.task('del', clean);
 gulp.task('watch', watch);
-gulp.task('imageSquash', imageSquash);
-// gulp.task('watch', () => {
-//     gulp.watch('./src/img/**/*.{jpeg, png, svg}', imageSquash);
-// });
-gulp.task('build', gulp.series(clean, imageSquash, gulp.parallel(styles,scripts)));
+gulp.task('build', gulp.series(clean, image, gulp.parallel(styles,scripts)));
 gulp.task('dev', gulp.series('build', 'watch'));

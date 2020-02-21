@@ -1,0 +1,36 @@
+@import "src/scss/variables";
+@import "src/scss/mixins";
+
+.section__product-description {
+  @include flex-between-center-column;
+  margin-top: 35px;
+
+  &__offer {
+    padding-bottom: 72px;
+    font: 15px $font-primary;
+    color: #848e97;
+    text-transform: capitalize;
+    @media (min-width: $tablet) {
+      padding-bottom: 94px;
+    }
+    @media (min-width: $desktop) {
+      padding-bottom: 67px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 22px;
+    font: bold 25px $font-primary;
+    color: $color__primary--purple-dark;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    width: 266px;
+    height: 74px;
+    font: 13px $font-secondary;
+    color: #323232;
+    text-align: center;
+    line-height: 19px;
+  }
+}

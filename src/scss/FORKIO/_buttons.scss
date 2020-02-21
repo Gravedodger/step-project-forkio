@@ -3,12 +3,12 @@
 
 .btn__purple {
   @include button__rounded;
-  color: $color-white;
-  background-color: $color-purple--light;
+  color: $color__general--white;
+  background-color: $color__primary--purple-light;
   text-transform: capitalize;
   &--buyNow {
     @extend .btn__purple;
-    padding: 12px 24px;
+    padding: 9px 24px;
     font: bold 15px $font-primary;
     @media (min-width: $tablet) {
       width: 145px;
@@ -22,8 +22,8 @@
     @extend .btn__purple;
     width: 290px;
     height: 45px;
-    padding: 16px 32px;
-    font: bold 13px $font-primary;
+    //padding: 16px 32px;
+    font: bold 18px $font-primary;
     @media (min-width: $tablet) {
       width: 390px;
       height: 62px;
@@ -35,8 +35,8 @@
     }
   }
     &:hover {
-    color: $color-purple--light;
-    background-color: $color-white;
+    color: $color__primary--purple-light;
+    background-color: $color__general--white;
   }
 }
 
@@ -45,7 +45,7 @@
   width: 160px;
   height: 42px;
   padding: 16px 37px;
-  color: $color-white;
+  color: $color__general--white;
   text-transform: uppercase;
   background-color: #776b79;
   &--cardActive {
