@@ -1,5 +1,5 @@
 {
-  "name": "STEP-PROJECT-2-Forkio",
+  "name": "step-project__forkio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,10 +21,7 @@
     "gulp-js-minify": "0.0.3",
     "gulp-minify": "^3.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp-scss": "^1.4.0",
-    "gulp-smushit": "^1.2.0",
     "gulp-uglify": "^3.0.2",
-    "readable-stream": "^3.6.0"
   },
   "dependencies": {
     "jquery": "^3.4.1"

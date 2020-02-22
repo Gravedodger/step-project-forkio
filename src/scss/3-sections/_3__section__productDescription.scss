@@ -1,6 +1,7 @@
-@import "src/scss/variables";
-@import "src/scss/mixins";
-@import "src/scss/components/widgets";
+@import "src/scss/1-partials/variables";
+@import "src/scss/1-partials/mixins";
+@import "src/scss/2-components/widgets";
+
 
 .section__product-description {
   @include flex-between-center-column;
@@ -71,7 +72,6 @@
       width: 1000px;
       flex-direction: row;
     }
-
 
   }
 }
