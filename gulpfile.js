@@ -28,11 +28,9 @@ function styles() {
 
 
 function scripts() {
-    return gulp.src(jsFiles).
+    return (gulp.src(jsFiles).
     pipe(concat('script.js')).
-    pipe(uglify({
-        toplevel: true
-    })).
+    pipe(uglify())).
     pipe(gulp.dest('./dist')).
     pipe(browserSync.stream());
 }
@@ -66,7 +64,7 @@ function watch() {
 
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
-gulp.task('imagemin', image);
+gulp.task('image', image);
 gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean, image, gulp.parallel(styles,scripts)));

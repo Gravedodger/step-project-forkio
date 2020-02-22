@@ -30,3 +30,12 @@
   flex-direction: column;
 }
 
+@mixin button__rounded {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+

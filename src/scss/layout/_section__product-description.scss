@@ -1,5 +1,6 @@
 @import "src/scss/variables";
 @import "src/scss/mixins";
+@import "src/scss/components/widgets";
 
 .section__product-description {
   @include flex-between-center-column;
@@ -19,10 +20,25 @@
   }
 
   &__title {
-    padding-bottom: 22px;
+    @include flex-center;
+    width: 236px;
+    height: 60px;
     font: bold 25px $font-primary;
     color: $color__primary--purple-dark;
     text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      width: 558px;
+      height: 31px;
+      font-size: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 718px;
+      height: 40px;
+      font-size: 50px;
+    }
   }
 
   &__text {
@@ -30,7 +46,32 @@
     height: 74px;
     font: 13px $font-secondary;
     color: #323232;
+    padding-top: 23px;
+    margin-bottom: 34px;
     text-align: center;
     line-height: 19px;
+    
+    @media (min-width: $tablet) {
+      width: 669px;
+      height: 52px;
+      font-size: 20px;
+      margin-bottom: 38px;
+    }
+    
+    @media (min-width: $desktop) {
+      width: 913px;
+    }
+  }
+
+  &__widgets {
+    @include flex-center;
+    width: 252px;
+
+    @media (min-width: $tablet) {
+      width: 1000px;
+      flex-direction: row;
+    }
+
+
   }
 }

@@ -1,6 +1,6 @@
-// MENU__HAMBURDER--DROPDOWN
+// MENU__HAMBURGER--DROPDOWN
 $(document).ready(function(){
-    $('#nav-icon1').click(function(){
+    $('#nav-icon').click(function(){
         $(this).toggleClass('open');
     });
 });

@@ -10,8 +10,6 @@
 
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   transform-style: preserve-3d;
 }
@@ -23,10 +21,28 @@ a {
 }
 
 .body {
-  display: flex;
-  justify-content: center;
   height: 100vh;
   font-family: $font-primary;
+  justify-content: center;
   perspective: 700px;
   background: #27262a;
+}
+
+.main {
+  margin: 0 auto;
+
+  @media (min-width: $mobile) {
+    min-width: 320px;
+    max-width: 480px;
+  }
+
+  @media (min-width: $tablet) {
+    min-width: 481px;
+    max-width: 1200px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 481px;
+    max-width: 1200px;
+  }
 }

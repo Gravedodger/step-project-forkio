@@ -1,0 +1,48 @@
+@import "./src/scss/variables";
+@import "./src/scss/mixins";
+
+.widget__icon-counter {
+  @include flex-between-center;
+  display: table;
+  width: 106px;
+  margin-top: 37px;
+  margin-right: 20px;
+
+
+  &__icon__box, &__counter__box {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__icon__box {
+    @include flex-center-space-around;
+    background-color: #f8f8f8;
+    position: absolute;
+    left: 0;
+    width: 65%;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cbcbcb;
+    border-radius: 3px 0 0 3px;
+
+    &__icon{
+    width: 16px;
+    height: 16px;
+    padding-right: 3px;
+    }
+  }
+
+  &__counter__box {
+    @include flex-center-space-around;
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 22px;
+    border: .2mm solid #e1e1e1;
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+  }
+}

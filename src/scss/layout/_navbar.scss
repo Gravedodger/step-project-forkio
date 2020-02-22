@@ -3,21 +3,20 @@
 @import "src/scss/components/logos";
 @import "src/scss/components/buttons";
 @import "src/scss/components/menu__hamburger--dropdown";
+@import "src/scss/layout/body";
 
 
 .nav {
   @media (min-width: $mobile) {
-    min-width: 320px;
-    min-height: 103px;
+    width: 100%;
+    min-height: 103px;;
     padding: 0 16px;
   }
   @media (min-width: $tablet) {
-    min-width: 768px;
     min-height: 118px;
     padding: 22px 20px;
   }
   @media (min-width: $desktop) {
-    min-width: 1200px;
     padding: 0 90px;
   }
 
