@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700i,900|Montserrat:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
     <title>FORKIO</title>
 </head>
 <body>
+
     <header class="header">
+
         <nav class="nav">
 
             <div class="navbar__logo">
                 <img class="navbar__logo__image"
-                     src="dist/images--optimized/logo-forkio-nav--purple.png" alt="forkio logo">
+                     src="./dist/images--optimized/logo/logo-forkio-nav--purple.png" alt="forkio logo">
                 <img class="navbar__logo__image--white"
-                     src="dist/images--optimized/logo-forkio-nav--white.png" alt="forkio logo">
+                     src="./dist/images--optimized/logo/logo-forkio-nav--white.png" alt="forkio logo">
                 <h1 class="navbar__logo__text">forkio</h1>
             </div>
 
@@ -56,46 +57,46 @@
         <h2 class="section__product-description__title">revolutionary editor</h2>
         <p class="section__product-description__text">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
 
+        <div class="section__product-description__widgets">
+            <div class="widget__icon-counter">
+                <button class="widget__icon-counter__icon__box">
+                    <img class="widget__icon-counter__icon__box__icon"
+                         src="./dist/images--optimized/icn/icn-eye.svg" alt="watch icon">
+                    watch
+                </button>
+                <div class="widget__icon-counter__counter__box">
+                    <p class="widget__icon-counter__counter__text">0</p>
+                </div>
+            </div>
+
+            <div class="widget__icon-counter">
+                <div class="widget__icon-counter__icon__box">
+                    <img class="widget__icon-counter__icon__box__icon"
+                         src="dist/images--optimized/icn/icn-star.svg" alt="watch icon">
+                    star
+                </div>
+                <div class="widget__icon-counter__counter__box">
+                    <p class="widget__icon-counter__counter__text">0</p>
+                </div>
+            </div>
+
             <div class="section__product-description__widgets">
                 <div class="widget__icon-counter">
-                    <button class="widget__icon-counter__icon__box">
+                    <div id="click" class="widget__icon-counter__icon__box">
                         <img class="widget__icon-counter__icon__box__icon"
-                             src="dist/images--optimized/icn-eye.svg" alt="watch icon">
-                        watch
-                    </button>
-                    <div class="widget__icon-counter__counter__box">
-                        <p class="widget__icon-counter__counter__text">0</p>
-                    </div>
-                </div>
-
-                <div class="widget__icon-counter">
-                    <div class="widget__icon-counter__icon__box">
-                        <img class="widget__icon-counter__icon__box__icon"
-                             src="dist/images--optimized/icn-star.svg" alt="watch icon">
-                        star
+                             src="dist/images--optimized/icn/icn-code-fork.svg" alt="watch icon">
+                        fork
                     </div>
                     <div class="widget__icon-counter__counter__box">
                         <p class="widget__icon-counter__counter__text">0</p>
                     </div>
                 </div>
-
-                <div class="section__product-description__widgets">
-                    <div class="widget__icon-counter">
-                        <div id="click" class="widget__icon-counter__icon__box">
-                            <img class="widget__icon-counter__icon__box__icon"
-                                 src="dist/images--optimized/icn-code-fork.svg" alt="watch icon">
-                            fork
-                        </div>
-                        <div class="widget__icon-counter__counter__box">
-                            <p class="widget__icon-counter__counter__text">0</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
+        </div>
+    </section>
 
+    </main>
 
 
         <!--    <ul class="nav__menu">-->
@@ -105,7 +106,6 @@
         <!--        <li class="nav__menu__item"><a href="#">support</a></li>-->
         <!--    </ul>-->
 
-    </main>
     <script src="dist/jquery.min.js"></script>
     <script src="dist/app.js"></script>
 </body>

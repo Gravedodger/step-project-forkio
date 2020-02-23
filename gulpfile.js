@@ -11,6 +11,16 @@ const browserSync = require('browser-sync').create();
 const scssFiles = ['./src/scss/**/*.scss'];
 const jsFiles = ['./src/js/*.js'];
 
+const distJQuery = () => {
+    return gulp.src("./node_modules/jquery/dist/jquery.min.js")
+        .pipe(gulp.dest("dist/"));
+};
+
+function copyFonts() {
+    return gulp.src('./src/fonts/*').
+    pipe(gulp.dest('./dist/fonts/'));
+}
+
 function styles() {
     return gulp.src(scssFiles).
     pipe(concat('main.css')).
@@ -29,19 +39,14 @@ function scripts() {
     pipe(browserSync.stream());
 }
 
-const distJQuery = () => {
-    return gulp.src("./node_modules/jquery/dist/jquery.min.js")
-.pipe(gulp.dest("dist/"));
-};
-
 function image() {
-    return gulp.src('./src/img/**/*.{png, svg, jpeg}')
+    return gulp.src('./src/img/**/*')
         .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest('./dist/images--optimized'));
 }
 
 function clean() {
-    return del(['dist/'])
+    return del(['dist/']);
 }
 
 function watch() {
@@ -56,10 +61,11 @@ function watch() {
 }
 
 gulp.task('distJQuery', distJQuery);
+gulp.task('copyFonts', copyFonts);
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
-gulp.task('dev', gulp.series('build', 'watch'));
 gulp.task('image', image);
 gulp.task('del', clean);
 gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, image, distJQuery, gulp.parallel(styles,scripts)));
+gulp.task('build', gulp.series(clean, distJQuery, copyFonts, gulp.parallel(styles,scripts), image));
+gulp.task('dev', gulp.series('build', 'watch'));
