@@ -2,7 +2,7 @@
 @import "src/scss/1-partials/mixins";
 
 .widget__icon-counter {
-  @include flex-between-center;
+  @include flex-between;
   display: table;
   width: 106px;
   margin-top: 37px;
@@ -17,7 +17,7 @@
   }
 
   &__icon__box {
-    @include flex-center-space-around;
+    @include flex-around;
     background-color: #f8f8f8;
     position: absolute;
     left: 0;
@@ -36,7 +36,7 @@
   }
 
   &__counter__box {
-    @include flex-center-space-around;
+    @include flex-around;
     position: absolute;
     right: 0;
     width: 35%;

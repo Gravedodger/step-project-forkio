@@ -1,32 +1,48 @@
 @import "src/scss/1-partials/variables";
 
-@font-face {
-  font-family: $font-primary;
-}
-
-@font-face {
-  font-family: $font-secondary;
-}
-
-
-* {
+//******************
+//    GLOBAL
+//******************
+html {
   box-sizing: border-box;
-  transform-style: preserve-3d;
+  background-color: $color__general--white;
 }
 
+**:before *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  overflow: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+//******************
+//    LINKS
+//******************
 a {
   color: $color__general--white;
   text-decoration: none;
   cursor: pointer;
 }
 
-.body {
-  height: 100vh;
-  font-family: $font-primary;
-  justify-content: center;
-  perspective: 700px;
-  background: #27262a;
-}
+
+
+
+
+
+//******************
+//    MEDIA QUERY           ??????????????????????????????????????
+//******************
 
 .main {
   margin: 0 auto;

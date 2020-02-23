@@ -1,8 +1,8 @@
 @import "src/scss/0-tools__&__global/reset";
-@import "src/scss/0-tools__&__global/body";
+@import "src/scss/0-tools__&__global/typography";
 @import "src/scss/1-partials/variables";
-@import "src/scss/1-partials/functions";
 @import "src/scss/1-partials/mixins";
+@import "src/scss/3-sections/0__body";
 @import "src/scss/2-components/logos";
 @import "src/scss/2-components/buttons";
 @import "src/scss/2-components/menu__hamburger--dropdown";

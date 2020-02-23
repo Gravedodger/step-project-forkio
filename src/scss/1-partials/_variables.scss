@@ -1,15 +1,32 @@
-$font-primary: 'Montserrat', sans-serif;
-$font-secondary: 'Lato', sans-serif;
+@import "src/scss/0-tools__&__global/typography";
 
+//******************
+//    FONTS
+//******************
+$font-primary-regular: 'Montserrat-Regular';
+$font-primary-bold: 'Montserrat-Bold';
+$font-secondary-regular: "Lato-Regular";
+$font-secondary-boldItalic: "Lato-BoldItalic";
+
+//******************
+//    COLORS
+//******************
+// white
 $color__general--white: #ffffff;
-
+// purple
 $color__primary--purple-light: #8d81ac;
 $color__primary--purple-dark: #635C73;
-
+// gray
 $color__letters--gray-light: #848E97;
-$color__letters--gray-dark: #848e97;
+$color__letters--gray-dark: #323232;
+// background
+$color__background__navbar: #27262a;
+$color__background__footer__bottom: #4a3b4e;
+$color__background__footer__top: #8d7da4;
 
-
+//******************
+//    RESOLUTIONS
+//******************
 $mobile: 320px;
 $tablet: 768px;
 $desktop: 1200px;

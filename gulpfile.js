@@ -17,17 +17,22 @@ function styles() {
     pipe(sass()).
     pipe(autoprefixer()).
     pipe(cleanCSS({level: 2})).
-    pipe(gulp.dest('./dist')).
+    pipe(gulp.dest('dist/')).
     pipe(browserSync.stream());
 }
 
 function scripts() {
     return gulp.src(jsFiles).
-    pipe(concat('script.js')).
+    pipe(concat('app.js')).
     pipe(uglify()).
     pipe(gulp.dest('./dist')).
     pipe(browserSync.stream());
 }
+
+const distJQuery = () => {
+    return gulp.src("./node_modules/jquery/dist/jquery.min.js")
+.pipe(gulp.dest("dist/"));
+};
 
 function image() {
     return gulp.src('./src/img/**/*.{png, svg, jpeg}')
@@ -50,10 +55,11 @@ function watch() {
     gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
+gulp.task('distJQuery', distJQuery);
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
+gulp.task('dev', gulp.series('build', 'watch'));
 gulp.task('image', image);
 gulp.task('del', clean);
 gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, image, gulp.parallel(styles,scripts)));
-gulp.task('dev', gulp.series('build', 'watch'));
+gulp.task('build', gulp.series(clean, image, distJQuery, gulp.parallel(styles,scripts)));

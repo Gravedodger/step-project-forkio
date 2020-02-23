@@ -1,3 +1,6 @@
+//******************
+//    DISPLAY: FLEX
+//******************
 @mixin flex {
   display: flex;
   flex-wrap: wrap;
@@ -5,7 +8,6 @@
 
 @mixin flex-center {
   @include flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -14,21 +16,24 @@
   justify-content: space-between;
 }
 
-@mixin flex-between-center {
-  @include flex-between;
-  align-items: center;
-}
-
-@mixin flex-center-space-around {
+@mixin flex-around {
   @include flex;
-  align-items: center;
   justify-content: space-around;
 }
 
-@mixin flex-between-center-column {
-  @include flex-between-center;
+@mixin flex-even {
+  @include flex;
+  justify-content: space-evenly;
+}
+
+@mixin flex-column {
   flex-direction: column;
 }
+
+
+//******************
+//    BUTTONS
+//******************
 
 @mixin button__rounded {
   display: inline-block;
