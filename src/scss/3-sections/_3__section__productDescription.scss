@@ -2,21 +2,23 @@
 @import "src/scss/1-partials/mixins";
 @import "src/scss/2-components/widgets";
 
-
 .section__product-description {
-  @include flex-between;
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-top: 35px;
 
   &__offer {
-    padding-bottom: 72px;
     font: 15px $font-primary-regular;
     color: #848e97;
     text-transform: capitalize;
     @media (min-width: $tablet) {
+      margin-top: 12px;
       padding-bottom: 94px;
     }
     @media (min-width: $desktop) {
-      padding-bottom: 67px;
+      padding: 0;
     }
   }
 
@@ -24,6 +26,7 @@
     @include flex-center;
     width: 236px;
     height: 60px;
+    padding-top: 72px;
     font: 25px $font-primary-bold;
     color: $color__primary--purple-dark;
     text-transform: uppercase;
@@ -33,12 +36,16 @@
       width: 558px;
       height: 31px;
       font-size: 40px;
+      padding-top: 0;
+      padding-bottom: 38px;
     }
 
     @media (min-width: $desktop) {
       width: 718px;
       height: 40px;
       font-size: 50px;
+      padding-top: 67px;
+      margin: 0;
     }
   }
 
@@ -56,7 +63,8 @@
       width: 669px;
       height: 52px;
       font-size: 20px;
-      margin-bottom: 38px;
+      margin-bottom: 36px;
+      padding-top: 0;
     }
     
     @media (min-width: $desktop) {
@@ -65,13 +73,19 @@
   }
 
   &__widgets {
-    @include flex-center;
+    @include flex-around;
     width: 252px;
+    height: 70px;
 
-    @media (min-width: $tablet) {
-      width: 1000px;
-      flex-direction: row;
+    @media screen and (min-width: $tablet) {
+      flex-wrap: nowrap;
+      width: 365px;
+      height: 26px;
+      justify-content: center;
+      padding-bottom: 98px;
     }
-
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 70px;
+    }
   }
 }

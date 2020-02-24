@@ -2,14 +2,14 @@
 @import "src/scss/1-partials/mixins";
 
 .widget__icon-counter {
-  @include flex-between;
-  display: table;
+  display: flex;
   width: 106px;
-  margin-top: 37px;
-  margin-right: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 
 
   &__icon__box, &__counter__box {
+    display: flex;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
@@ -17,14 +17,11 @@
   }
 
   &__icon__box {
-    @include flex-around;
-    background-color: #f8f8f8;
-    position: absolute;
-    left: 0;
-    width: 65%;
-    height: 22px;
     align-items: center;
     justify-content: center;
+    background-color: #f8f8f8;
+    width: 70px;
+    height: 26px;
     border: 1px solid #cbcbcb;
     border-radius: 3px 0 0 3px;
 
@@ -37,10 +34,9 @@
 
   &__counter__box {
     @include flex-around;
-    position: absolute;
-    right: 0;
-    width: 35%;
-    height: 22px;
+    width: 40px;
+    height: 26px;
+    align-items: center;
     border: .2mm solid #e1e1e1;
     border-left: none;
     border-radius: 0 3px 3px 0;
