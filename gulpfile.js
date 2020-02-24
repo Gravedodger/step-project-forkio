@@ -11,11 +11,6 @@ const browserSync = require('browser-sync').create();
 const scssFiles = ['./src/scss/**/*.scss'];
 const jsFiles = ['./src/js/*.js'];
 
-const distJQuery = () => {
-    return gulp.src("./node_modules/jquery/dist/jquery.min.js")
-        .pipe(gulp.dest("dist/"));
-};
-
 function copyFonts() {
     return gulp.src('./src/fonts/*').
     pipe(gulp.dest('./dist/fonts/'));
@@ -31,9 +26,14 @@ function styles() {
     pipe(browserSync.stream());
 }
 
+const distJQuery = () => {
+    return gulp.src("./node_modules/jquery/dist/jquery.min.js")
+        .pipe(gulp.dest("dist/"));
+};
+
 function scripts() {
     return gulp.src(jsFiles).
-    pipe(concat('app.js')).
+    pipe(concat('script.js')).
     pipe(uglify()).
     pipe(gulp.dest('./dist')).
     pipe(browserSync.stream());
@@ -60,10 +60,10 @@ function watch() {
     gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
-gulp.task('distJQuery', distJQuery);
 gulp.task('copyFonts', copyFonts);
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
+gulp.task('distJQuery', distJQuery);
 gulp.task('image', image);
 gulp.task('del', clean);
 gulp.task('watch', watch);

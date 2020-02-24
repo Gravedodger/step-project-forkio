@@ -1,23 +1,21 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
 
-.navbar__logo {
+.nav__logo {
   @include flex-between;
   position: relative;
+  align-items: center;
   float: left;
+
   &__image {
     width: 43px;
     height: 41px;
+
     &--white {
       display: none;
     }
   }
-  &:hover .navbar__logo__image {
-    display: none;
-  }
-  &:hover .navbar__logo__image--white {
-    display: flex;
-  }
+
   &__text {
     display: none;
     margin-left: 17px;
@@ -25,15 +23,21 @@
     color: $color__primary--purple-light;
     text-transform: uppercase;
 
-    &:hover {
-      color: $color__general--white;
-    }
-
     @media (min-width: $tablet) {
       display: flex;
-      float: left;
-
     }
+  }
+
+  &:hover .nav__logo__image {
+    display: none;
+  }
+
+  &:hover .nav__logo__image--white {
+    display: flex;
+  }
+
+  &:hover .nav__logo__text {
+    color: $color__general--white;
   }
 }
 

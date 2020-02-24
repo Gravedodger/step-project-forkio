@@ -13,7 +13,7 @@
     position: relative;
     width: 100%;
     min-height: 500px;
-    background: url("../dist/images--optimized/bg-main-laptop.png") no-repeat 50% 50%;
+    background: url("/dist/images--optimized/bg/bg-main-laptop.png") no-repeat 50% 50%;
     background-size: cover;
     justify-content: center;
 
@@ -47,6 +47,12 @@
         padding-top: 20px;
       }
     }
+  }
+
+
+  @media screen and (min-width: $tablet){
+    min-width: $tablet;
+
   }
 }
 

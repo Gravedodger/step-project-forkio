@@ -1,3 +1,4 @@
+@import "src/scss/0-tools__&__global/typography";
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
 @import "src/scss/2-components/logos";
@@ -5,75 +6,66 @@
 @import "src/scss/2-components/menu__hamburger--dropdown";
 @import "src/scss/3-sections/0__body";
 
-
 .nav {
-  @media (min-width: $mobile) {
-    width: 100%;
-    min-height: 103px;;
-    padding: 0 16px;
-  }
-  @media (min-width: $tablet) {
-    min-height: 118px;
-    padding: 22px 20px;
-  }
-  @media (min-width: $desktop) {
-    padding: 0 90px;
-  }
-
   @include flex-between;
-  color: $color__general--white;
+  height: 103px;
+  flex-wrap: wrap;
   background-color: #27262a;
   text-transform: capitalize;
   align-items: center;
-  z-index: 1000;
 
   &__menu {
-    @media (min-width: $mobile) {
+    display: none;
+  }
+
+  @media screen and (min-width: $mobile) {
+    padding: 0 16px;
+  }
+
+  ////******************
+  ////  MEDIA: TABLET
+  ////******************
+  @media screen and (min-width: $tablet) {
+
+    .icn__hamburger--dropdown {
       display: none;
-      transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    @media (min-width: $tablet) {
+    .btn__purple--buyNow {;
+    }
+
+    &__menu {
+      @include flex-between;
+      margin-left: 80px;
+
+
+      &__links {
+        display: flex;
+
+        margin-left: 35px;
+        font: 17px $font-primary-bold;
+        color: $color__primary--purple-light;
+
+        &:hover {
+          color: $color__general--white;
+        }
+      }
+    }
+  }
+
+  ////******************
+  ////  MEDIA: DESKTOP
+  ////******************
+  @media screen and (min-width: $desktop) {
+    &__flex-container {
       display: flex;
-      align-items: center;
-      float: right;
-      justify-content: space-evenly;
+      flex-flow: row wrap;
+      flex-direction: row;
+      padding: 0 90px;
+
+      .nav__flex-item:nth-of-type(1) { order: 1; }
+      .nav__flex-item:nth-of-type(2) { order: 3; }
+      .nav__flex-item:nth-of-type(3) { order: 2; }
     }
   }
 }
-
-
-.dropdown__content {
-  visibility: hidden;
-  position: absolute;
-  top: 102px;
-  right: 0;
-  background-color: #333333;
-  min-width: 290px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
-
-  &:active {
-    visibility: visible;
-    display: block;
-  }
-
-  a {
-    display: block;
-    padding: 31px 33px;
-    font: 19px $font-primary-regular;
-    color: $color__general--white;
-    text-transform: capitalize;
-    border: 1px solid #3b3b3b;
-
-    &:hover {
-      display: block;
-      color: $color__primary--purple-light;
-    }
-  }
-
-}
-
-
-
-

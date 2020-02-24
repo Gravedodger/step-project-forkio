@@ -8,48 +8,83 @@
     <title>FORKIO</title>
 </head>
 <body>
-
     <header class="header">
 
-        <nav class="nav">
+<!--    //NAVBAR        -->
+        <nav class="nav nav__flex-container">
 
-            <div class="navbar__logo">
-                <img class="navbar__logo__image"
-                     src="./dist/images--optimized/logo/logo-forkio-nav--purple.png" alt="forkio logo">
-                <img class="navbar__logo__image--white"
-                     src="./dist/images--optimized/logo/logo-forkio-nav--white.png" alt="forkio logo">
-                <h1 class="navbar__logo__text">forkio</h1>
+            <div class="nav__flex-item">
+                <a class="nav__logo__container" href="#">
+                    <div class="nav__logo">
+                        <img class="nav__logo__image"
+                             src="/dist/images--optimized/logo/logo-forkio-nav--purple.png" alt="forkio logo">
+                        <img class="nav__logo__image--white"
+                             src="/dist/images--optimized/logo/logo-forkio-nav--white.png" alt="forkio logo">
+                        <h2 class="nav__logo__text">forkio</h2>
+                    </div>
+                </a>
             </div>
 
-            <button class="btn__purple--buyNow">buy now</button>
+            <div class="nav__flex-item">
+                <button class="btn__purple--buyNow">buy now</button>
+            </div>
 
-            <div class="menu__hamburger--dropdown">
-                <div class="nav__menu__dropdown">
-                    <div id="nav-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <div class="nav__flex-item">
+                <ul class="nav__menu">
+                    <li><a href="#" class="nav__menu__links">overview</a></li>
+                    <li><a href="#" class="nav__menu__links">about fork</a></li>
+                    <li><a href="#" class="nav__menu__links">buying options</a></li>
+                    <li><a href="#" class="nav__menu__links">support</a></li>
+                </ul>
+            </div>
+
+            <div class="icn__hamburger--dropdown">
+                <div id="closeBtn" onclick="dropFunction()">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
+
+                <div id="dropList" class="dropdown-content">
+
+                    <div class="dropdown-content__links__container">
+                        <div class="dropdown-content__links__sideBox--purple"></div>
+                        <a class="dropdown-content__links" href="#"><p>overview</p></a>
                     </div>
-                    <ul class="dropdown__content nav__menu">
-                        <li><a href="#">overview</a></li>
-                        <li><a href="#">about fork</a></li>
-                        <li><a href="#">buying options</a></li>
-                        <li><a href="#">support</a></li>
-                    </ul>
+
+                    <div class="dropdown-content__links__container">
+                        <div class="dropdown-content__links__sideBox--purple"></div>
+                        <a class="dropdown-content__links" href="#"><p>about fork</p></a>
+                    </div>
+
+                    <div class="dropdown-content__links__container">
+                        <div class="dropdown-content__links__sideBox--purple"></div>
+                        <a class="dropdown-content__links" href="#"><p>buying options</p></a>
+                    </div>
+
+                    <div class="dropdown-content__links__container">
+                        <div class="dropdown-content__links__sideBox--purple"></div>
+                        <a class="dropdown-content__links" href="#"><p>support</p></a>
+                    </div>
                 </div>
             </div>
+
         </nav>
 
+
+<!--    // HEARER /w BACKGROUND IMAGE        -->
         <div class="header__intro">
+
             <div class="header__intro__text">
                 <h1 class="header__intro__text__title">fork app</h1>
                 <h3 class="header__intro__text__slogan">A Real Gamechanger In The World Of Web-Development</h3>
                 <h2 class="header__intro__text__subTitle">v. 2.8 For Mac and Windows</h2>
             </div>
+
             <button class="btn__purple--downloadNow">download for free now</button>
+
         </div>
     </header>
-
     <main class="main">
 
     <section class="section__product-description">
@@ -99,14 +134,9 @@
     </main>
 
 
-        <!--    <ul class="nav__menu">-->
-        <!--        <li class="nav__menu__item"><a href="#">overview</a></li>-->
-        <!--        <li class="nav__menu__item"><a href="#">about fork</a></li>-->
-        <!--        <li class="nav__menu__item"><a href="#">buying options</a></li>-->
-        <!--        <li class="nav__menu__item"><a href="#">support</a></li>-->
-        <!--    </ul>-->
 
+
+    <script src="dist/script.js"></script>
     <script src="dist/jquery.min.js"></script>
-    <script src="dist/app.js"></script>
 </body>
 </html>

@@ -27,6 +27,7 @@
 }
 
 @mixin flex-column {
+  @include flex;
   flex-direction: column;
 }
 
