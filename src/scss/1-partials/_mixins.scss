@@ -45,3 +45,16 @@
   cursor: pointer;
 }
 
+
+//******************
+//    POSITIONING
+//******************
+@mixin center_&_align {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center_align_&_text {
+  @include center_&_align;
+  text-align: center;
+}

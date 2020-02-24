@@ -1,2 +1,145 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
+
+.section__offer {
+  @include flex-column;
+  @include center_align_&_text;
+
+  @media screen and (max-width: 997px) {
+    position: relative;
+    width: 100%;
+    margin-left: 12px;
+  }
+
+  @media screen and (min-width: $desktop){
+    width: 40%;
+    max-width: 1200px;
+    margin-top: 100px;
+  }
+
+
+  &__sectionTitle {
+    width: 227px;
+    height: 70px;
+    margin-bottom: 34px;
+    font: 30px $font-primary-bold;
+    color: $color__primary--purple-light;
+
+    @media screen and (min-width: $tablet) {
+      width: 501px;
+      height: 41px;
+      font: 40px $font-primary-bold;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      left: 52.5%;
+      top: 1260px;
+    }
+  }
+
+
+  &__mainContainer {
+    @include flex-column;
+    max-width: 700px;
+
+    @media screen and (min-width: $tablet) {
+      position: relative;
+      width: 100%;
+      margin-left: 12px;
+      text-align: left;
+    }
+  }
+
+
+  &__item {
+    padding-bottom: 37px;
+
+    @media screen and (min-width: $tablet) {
+      @include flex;
+      height: 65px;
+      margin-bottom: 34px;
+    }
+
+
+    &__img {
+      margin-bottom: 25px;
+
+      @media screen and (min-width: $tablet){
+        position: absolute;
+        justify-content: space-around;
+        flex: 0 0 0 134px;
+      }
+      @media screen and (min-width: $desktop) {
+      }
+    }
+
+
+    &__text {
+
+      @media screen and (min-width: $tablet) {
+        position: absolute;
+        margin-left: 124px;
+      }
+    }
+
+
+    &__title {
+      font: 15px $font-primary-regular;
+      padding-bottom: 18px;
+
+      @media screen and (min-width: $tablet){
+        font-size: 15px;
+      }
+    }
+
+
+    &__article {
+      width: 270px;
+      font: 13px $font-secondary-regular;
+      line-height: 19px;
+
+      @media screen and (min-width: $tablet) {
+        width: 567px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 346px;
+      }
+    }
+  }
+
+
+  &__sideImage__container {
+    position: relative;
+    left: 1%;
+    max-width: 320px;
+    padding: 0 50px 380px 270px;
+    background-image: url("/dist/images--optimized/bg/bg-ide-side.png");
+    background-repeat: no-repeat;
+    background-size: 800px;
+
+    @media screen  and (min-width: $tablet) {
+      max-width: 977px;
+      padding: 0 518px 519px 250px;
+      margin-bottom: 30px;
+      background-size: 980px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      left: 51%;
+      max-width: 1200px;
+      padding: 130px 595px 347px 0;
+
+    }
+  }
+}
+
+
+.image__misc--left, .image__misc--right {
+  width: 15px;
+  height: 15px;
+  padding-bottom: 3px;
+}

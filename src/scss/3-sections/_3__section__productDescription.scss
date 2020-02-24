@@ -76,16 +76,17 @@
     @include flex-around;
     width: 252px;
     height: 70px;
+    margin-bottom: 88px;
 
     @media screen and (min-width: $tablet) {
       flex-wrap: nowrap;
       width: 365px;
       height: 26px;
       justify-content: center;
-      padding-bottom: 98px;
+      margin-bottom: 98px;
     }
     @media screen and (min-width: $desktop) {
-      padding-bottom: 70px;
+      margin-bottom: 70px;
     }
   }
 }
