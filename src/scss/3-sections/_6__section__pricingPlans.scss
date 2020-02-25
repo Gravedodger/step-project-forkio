@@ -1,0 +1,80 @@
+@import "src/scss/1-partials/variables";
+@import "src/scss/1-partials/mixins";
+
+.section__pricingPlans {
+  padding: 70px 32px 93px 31px;
+  background: $color__background__footer__bottom;
+
+
+  &__mainContainer {
+    color: $color__general--white;
+  }
+
+
+  &__sectionTitle {
+    width: 257px;
+    font: 26px $font-primary-bold;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 53px;
+  }
+}
+
+
+
+.pricingPlan__card {
+  @include center_-_align_-_text;
+  width: 257px;
+  margin-bottom: 14px;
+
+  &__head {
+    padding: 46px 0 34px;
+    background-color: $color__card__head;
+
+    &__text {
+      font: 22px $font-primary-regular;
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    background-color: $color__card__body;
+    padding: 35px 0 38px;
+
+    &__price {
+      font: 60px $font-primary-regular;
+    }
+
+    span {
+      font-family: $font-primary-bold;
+    }
+
+    &--perMonth {
+      color: #908391;
+      padding-top: 15px;
+      font-family: 11px $font-primary-regular;
+      text-transform: uppercase;
+    }
+
+    &__licensePlan {
+      font-family: $font-primary-regular;
+      text-transform: capitalize;
+      line-height: 30px;
+    }
+  }
+}
+
+
+.line--purple {
+  width: 60px;
+  height: 5px;
+  margin-top: 39px;
+  margin-bottom: 31px;
+  border: none;
+  background-color: $color__primary--purple-light;
+}
+
+.btn__purchase {
+  margin-top: 68px;
+}

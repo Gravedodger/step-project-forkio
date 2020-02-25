@@ -1,0 +1,92 @@
+@import "src/scss/1-partials/variables";
+@import "src/scss/1-partials/mixins";
+
+.section__testimonials {
+  padding: 61px 35px 2px;
+  background: url("/dist/images--optimized/bg/bg__footer__top.png") no-repeat ;
+  background-size: cover;
+
+  @media screen and (min-width: $tablet) {
+    padding: 79px 18px 70px 19px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 98px 91px 118px 96px;
+  }
+
+  &__separator {
+    height: 2px;
+    background-color: #645766;
+    border: none;
+  }
+
+  &__mainContainer {
+
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 1200px;
+    }
+  }
+
+
+  &__title {
+    min-width: 266px;
+    padding-bottom: 49px;
+    color: $color__general--white;
+    font: 35px $font-primary-bold;
+    text-transform: capitalize;
+    text-align: center;
+
+    @media screen and (min-width: 480px) {
+      line-height: 1.2em;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 42px;
+      line-height: 1em;
+    }
+  }
+}
+
+
+.testimonials__itemsContainer {
+
+  @media screen and (min-width: $tablet) {
+    //justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    //width: 100%;
+  }
+}
+
+
+.testimonials__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 170px;
+  padding-bottom: 41px;
+
+
+
+  @media screen and (min-width: $desktop) {
+  }
+
+  @media screen and (min-width: $tablet) {
+
+  }
+
+  &__quote {
+    width: 245px;
+    color: $color__general--white;
+    font: 16px $font-secondary-boldItalic;
+    line-height: 24px;
+  }
+
+}
