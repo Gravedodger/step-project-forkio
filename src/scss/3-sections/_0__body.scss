@@ -1,11 +1,13 @@
 @import "src/scss/1-partials/variables";
+@import "src/scss/1-partials/mixins";
+
 
 //******************
 //    GLOBAL
 //******************
 html {
   box-sizing: border-box;
-  background-color: $color__general--white;
+  //background-color: $color__general--white;
 }
 
 **:before *:after {
@@ -16,12 +18,12 @@ body {
   height: 100vh;
 }
 
-.container {
-  overflow: auto;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+//.container {
+//  overflow: auto;
+//  width: 100%;
+//  max-width: 1200px;
+//  margin: 0 auto;
+//}
 
 
 //******************

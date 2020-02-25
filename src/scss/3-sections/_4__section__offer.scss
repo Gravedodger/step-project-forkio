@@ -8,7 +8,6 @@
   @media screen and (max-width: 997px) {
     position: relative;
     width: 100%;
-    margin-left: 12px;
   }
 
   @media screen and (min-width: $desktop){
@@ -118,7 +117,7 @@
     padding: 0 50px 380px 270px;
     background-image: url("/dist/images--optimized/bg/bg__sectOffer__IDE--side.png");
     background-repeat: no-repeat;
-    background-size: 800px;
+    background-size: 700px;
 
     @media screen  and (min-width: $tablet) {
       max-width: 977px;
@@ -135,11 +134,4 @@
 
     }
   }
-}
-
-
-.image__misc--left, .image__misc--right {
-  width: 15px;
-  height: 15px;
-  padding-bottom: 3px;
 }
