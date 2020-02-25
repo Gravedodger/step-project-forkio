@@ -1,0 +1,87 @@
+@import "src/scss/1-partials/variables";
+@import "src/scss/1-partials/mixins";
+
+.section__testimonials {
+  padding: 61px 24px 44px 37px;
+  text-align: center;
+  background: url("dist/images--optimized/bg/bg__footer__top.png") no-repeat center;
+  background-size: cover;
+
+  @media screen and (min-width: $tablet){
+    padding: 79px 18px 70px 19px;
+  }
+
+  @media screen and (max-width: $desktop) {
+    padding: 98px 91px 118px 96px;
+  }
+
+
+  &__mainContainer {
+    min-width: 320px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop){
+      max-width: 1200px;
+    }
+  }
+
+
+  &__title {
+    font: 35px $font-primary-bold;
+
+    @media screen and (min-width: 480px) {
+      line-height: 1.2em;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 42px;
+      line-height: 1em;
+    }
+  }
+}
+
+
+.testimonials__itemsContainer {
+  @include flex;
+  width: 100%;
+  justify-content: space-between;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+  }
+
+}
+
+
+.testimonials__item {
+  width: 90%;
+
+
+  @media screen and (min-width: $desktop) {
+
+    &:first-child {
+      margin-top: 96px;
+    }
+
+    @media screen and (min-width: $tablet) {
+    }
+  }
+
+  &__logo {
+    display: flex;
+    @include center_-_align;
+    height: 45px;
+  }
+
+  &__quote {
+
+  }
+}

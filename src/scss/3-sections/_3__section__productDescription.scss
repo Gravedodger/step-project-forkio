@@ -4,9 +4,7 @@
 
 .section__product-description {
   @include flex-column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  @include center_-_align_-_text;
   margin-top: 35px;
 
   &__offer {

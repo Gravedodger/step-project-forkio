@@ -3,7 +3,7 @@
 
 .section__offer {
   @include flex-column;
-  @include center_align_&_text;
+  @include center_-_align_-_text;
 
   @media screen and (max-width: 997px) {
     position: relative;
@@ -116,7 +116,7 @@
     left: 1%;
     max-width: 320px;
     padding: 0 50px 380px 270px;
-    background-image: url("/dist/images--optimized/bg/bg-ide-side.png");
+    background-image: url("/dist/images--optimized/bg/bg__sectOffer__IDE--side.png");
     background-repeat: no-repeat;
     background-size: 800px;
 
