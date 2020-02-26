@@ -1,10 +1,12 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
 
+                                          /////
+                                         //     H A M B U R G E R - D R O P D O W N
+                                        //////
+
 .icn__hamburger--dropdown {
   @include flex;
-
-  //BUTTONS
 
   .line1, .line2, .line3 {
     position: relative;
@@ -51,9 +53,9 @@
     cursor: pointer;
   }
 
-  // DROPDOWN CONTENT
 
-  .dropdown-content {
+
+  .dropdown-content {                                         // DROPDOWN CONTENT
     display: none;
     position: absolute;
     top: 103px;
@@ -82,12 +84,12 @@
         text-decoration: none;
         border-bottom: 1px solid #3b3b3b;
 
-        &:hover .dropdown-content__links__sideBox--purple {
+        &:hover .dropdown-content__links__sideBox--purple {         // DROPDOWN CONTENT -- HOVER
           visibility: visible;
         }
       }
 
-      &:hover {
+      &:hover {                                                     // DROPDOWN CONTENT -- HOVER
         color: $color__primary--purple-light;
       }
 

@@ -1,5 +1,11 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
+@import "src/scss/0-tools__&__global/typography";
+
+
+                                          /////
+                                         //     L O G O S
+                                        /////
 
 .nav__logo {
   @include flex-between;
@@ -23,20 +29,20 @@
     color: $color__primary--purple-light;
     text-transform: uppercase;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) {                      // NAV_LOGO -- MEDIA -- Tablet
       display: flex;
     }
   }
 
-  &:hover .nav__logo__image {
+  &:hover .nav__logo__image {                          // NAV_LOGO -- HOVER -- Hide
     display: none;
   }
 
-  &:hover .nav__logo__image--white {
+  &:hover .nav__logo__image--white {                   // NAV_LOGO -- HOVER -- show
     display: flex;
   }
 
-  &:hover .nav__logo__text {
+  &:hover .nav__logo__text {                           // change text color
     color: $color__general--white;
   }
 }

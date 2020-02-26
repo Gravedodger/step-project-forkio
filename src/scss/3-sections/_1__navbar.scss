@@ -1,10 +1,7 @@
-@import "src/scss/0-tools__&__global/typography";
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
-@import "src/scss/2-components/logos";
-@import "src/scss/2-components/buttons";
-@import "src/scss/2-components/menu__hamburger--dropdown";
-@import "src/scss/3-sections/0__body";
+
+                                  //   S E C T I O N  -- N A V  &  M A I N / D R O P  M E N U
 
 .nav {
   @include flex-between;
@@ -18,20 +15,17 @@
     display: none;
   }
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $mobile) {                      // NAV__MENU -- MEDIA -- Mobile
     padding: 0 16px;
   }
 
-  ////******************
-  ////  MEDIA: TABLET
-  ////******************
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {                      // NAV__MENU -- MEDIA -- Tablet
 
     .icn__hamburger--dropdown {
       display: none;
     }
 
-    .btn__purple--buyNow {;
+    .btn__purple--buyNow {
     }
 
     &__menu {
@@ -46,17 +40,15 @@
         font: 17px $font-primary-bold;
         color: $color__primary--purple-light;
 
-        &:hover {
+        &:hover {                                              // NAV__MENU__LINKS -- HOVER
           color: $color__general--white;
         }
       }
     }
   }
 
-  ////******************
-  ////  MEDIA: DESKTOP
-  ////******************
-  @media screen and (min-width: $desktop) {
+
+  @media screen and (min-width: $desktop) {                    // NAV__MENU -- MEDIA -- Desktop
     &__flex-container {
       display: flex;
       flex-flow: row wrap;

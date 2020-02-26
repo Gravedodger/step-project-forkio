@@ -1,0 +1,32 @@
+@import "src/scss/1-partials/variables";
+@import "src/scss/1-partials/mixins";
+@import "src/scss/0-tools__&__global/typography";
+
+                                         /////
+                                        //     L I N E S
+                                       /////
+
+.line--purple {
+  width: 60px;
+  height: 5px;
+  margin-top: 39px;
+  margin-bottom: 31px;
+  border: none;
+  background-color: $color__primary--purple-light;
+}
+
+
+.section__testimonials__separator {
+  width: 280px;
+  height: 2px;
+  background-color: #645766;
+  border: none;
+
+  @media screen and (min-width: $tablet) {                      // SEPARATOR -- MEDIA -- Tablet
+    width: 699px;
+  }
+
+  @media screen and (min-width: $desktop) {                      // SEPARATOR -- MEDIA -- Desktop
+    width: 780px;
+  }
+}

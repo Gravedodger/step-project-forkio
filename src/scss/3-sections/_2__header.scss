@@ -1,8 +1,8 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
-@import "src/scss/2-components/logos";
-@import "src/scss/2-components/buttons";
-@import "src/scss/3-sections/0__body";
+
+
+                                      //   S E C T I O N  -- H E A D E R
 
 .header {
   &__intro {
@@ -43,10 +43,7 @@
   }
 
 
-  //******************
-  //    MEDIA QUERIES
-  //******************
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {                      // HEADER__INTRO -- MEDIA -- Tablet
     min-width: $tablet;
 
     &__intro {

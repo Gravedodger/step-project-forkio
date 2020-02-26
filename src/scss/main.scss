@@ -1,13 +1,32 @@
-@import "src/scss/0-tools__&__global/reset";
-@import "src/scss/0-tools__&__global/typography";
-@import "src/scss/1-partials/variables";
-@import "src/scss/1-partials/mixins";
+//********************
+//    GLOBAL SETTINGS
+//********************
+@import "src/scss/0-tools__&__global/reset";          // reset.css
+@import "src/scss/0-tools__&__global/typography";     // fonts
+
+
+//******************
+//    PARTIALS
+//******************
+@import "src/scss/1-partials/variables";              // fonts, colors and resolutions naming
+@import "src/scss/1-partials/mixins";                 // display, positioning and minor minor components
+
+
+//******************
+//    COMPONENTS
+//******************
 @import "src/scss/3-sections/0__body";
 @import "src/scss/2-components/logos";
 @import "src/scss/2-components/buttons";
 @import "src/scss/2-components/menu__hamburger--dropdown";
 @import "src/scss/2-components/widgets";
 @import "src/scss/2-components/cards__pricing";
+@import "src/scss/2-components/_lines--solid";
+
+
+//******************
+//    SECTIONS
+//******************
 @import "src/scss/3-sections/1__navbar";
 @import "src/scss/3-sections/2__header";
 @import "src/scss/3-sections/3__section__productDescription";

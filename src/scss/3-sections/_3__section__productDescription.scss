@@ -1,6 +1,8 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
-@import "src/scss/2-components/widgets";
+
+
+                          //   S E C T I O N  -- P R O D U C T  D E S C R I P T I O N
 
 .section__product-description {
   @include flex-column;
@@ -30,7 +32,7 @@
     text-transform: uppercase;
     text-align: center;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) {                    // section__product-description__title -- MEDIA -- Tablet
       width: 558px;
       height: 31px;
       font-size: 40px;
@@ -38,7 +40,7 @@
       padding-bottom: 38px;
     }
 
-    @media (min-width: $desktop) {
+    @media (min-width: $desktop) {                   // section__product-description__title -- MEDIA -- Desktop
       width: 718px;
       height: 40px;
       font-size: 50px;
@@ -46,6 +48,7 @@
       margin: 0;
     }
   }
+
 
   &__text {
     width: 266px;
@@ -57,7 +60,7 @@
     text-align: center;
     line-height: 19px;
     
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) {                   // section__product-description__text -- MEDIA -- Tablet
       width: 669px;
       height: 52px;
       font-size: 20px;
@@ -65,7 +68,7 @@
       padding-top: 0;
     }
     
-    @media (min-width: $desktop) {
+    @media (min-width: $desktop) {                  // section__product-description__text -- MEDIA -- Desktop
       width: 913px;
     }
   }
@@ -76,14 +79,14 @@
     height: 70px;
     margin-bottom: 88px;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) {      // section__product-description__widgets -- MEDIA -- Tablet
       flex-wrap: nowrap;
       width: 365px;
       height: 26px;
       justify-content: center;
       margin-bottom: 98px;
     }
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop) {    // section__product-description__widgets -- MEDIA -- Desktop
       margin-bottom: 70px;
     }
   }

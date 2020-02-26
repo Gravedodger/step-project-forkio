@@ -2,79 +2,78 @@
 @import "src/scss/1-partials/mixins";
 
 .section__pricingPlans {
-  padding: 70px 32px 93px 31px;
-  background: $color__background__footer__bottom;
+  @include flex-column;
+  @include center_-_align_-_text;
+  background-color: $color__background__footer__bottom;
 
+  @media screen and (min-width: $tablet) {
+    background: url("/dist/images--optimized/bg/bg__footer__bottom--viewDesktop.png") no-repeat;
+    background-size: cover;
+    flex-direction: row;
+  }
 
-  &__mainContainer {
-    color: $color__general--white;
+  @media screen and (min-width: $desktop) {
+    @include flex-center;
+    width: 100%;
   }
 
 
+  //////   SECTION TITLE    ////////
+
   &__sectionTitle {
-    width: 257px;
+    padding: 8% 0 5% 0;
     font: 26px $font-primary-bold;
     text-transform: capitalize;
     text-align: center;
     line-height: 40px;
-    margin-bottom: 53px;
-  }
-}
+    color: $color__general--white;
 
+    @media screen and (min-width: $tablet) {
+      font-size: 42px;
+    }
 
-
-.pricingPlan__card {
-  @include center_-_align_-_text;
-  width: 257px;
-  margin-bottom: 14px;
-
-  &__head {
-    padding: 46px 0 34px;
-    background-color: $color__card__head;
-
-    &__text {
-      font: 22px $font-primary-regular;
-      text-transform: uppercase;
+    @media screen and (min-width: $desktop) {
+      font-size: 46px;
+      padding-bottom: 12%;
     }
   }
 
-  &__body {
-    background-color: $color__card__body;
-    padding: 35px 0 38px;
 
-    &__price {
-      font: 60px $font-primary-regular;
+
+ //////   MAIN CONTAINER    ////////
+  &__mainContainer {
+    @include flex-column;
+    @include center_-_align_-_text;
+    width: 80%;
+    margin-bottom: 3%;
+    color: $color__general--white;
+
+    @media screen and (min-width: $tablet) {
+      @include flex-center;
+      @include center_-_align_-_text;
+      justify-content: space-evenly;
+      flex-direction: row;
+      flex-wrap: wrap;
+
     }
 
-    span {
-      font-family: $font-primary-bold;
-    }
-
-    &--perMonth {
-      color: #908391;
-      padding-top: 15px;
-      font-family: 11px $font-primary-regular;
-      text-transform: uppercase;
-    }
-
-    &__licensePlan {
-      font-family: $font-primary-regular;
-      text-transform: capitalize;
-      line-height: 30px;
+    @media screen and (min-width: $desktop) {
+      @include flex;
+      width: 96%;
+      justify-content: space-evenly;
+      margin-bottom: 8%;
+      padding-right: 50px;
     }
   }
-}
-
-
-.line--purple {
-  width: 60px;
-  height: 5px;
-  margin-top: 39px;
-  margin-bottom: 31px;
-  border: none;
-  background-color: $color__primary--purple-light;
 }
 
 .btn__purchase {
-  margin-top: 68px;
+  width: 62%;
+  font: 11px $font-primary-regular;
+  padding: 5% 0;
+  background: rgba(255,255,255,.15);
+}
+
+.btn__purchase__alt {
+  bottom: -18px;
 }
