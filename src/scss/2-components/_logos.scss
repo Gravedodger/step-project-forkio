@@ -29,20 +29,20 @@
     color: $color__primary--purple-light;
     text-transform: uppercase;
 
-    @media (min-width: $tablet) {                      // NAV_LOGO -- MEDIA -- Tablet
+    @media (min-width: $tablet-min) and (max-width: $desktop-max) {
       display: flex;
     }
   }
 
-  &:hover .nav__logo__image {                          // NAV_LOGO -- HOVER -- Hide
+  &:hover .nav__logo__image {
     display: none;
   }
 
-  &:hover .nav__logo__image--white {                   // NAV_LOGO -- HOVER -- show
+  &:hover .nav__logo__image--white {
     display: flex;
   }
 
-  &:hover .nav__logo__text {                           // change text color
+  &:hover .nav__logo__text {
     color: $color__general--white;
   }
 }

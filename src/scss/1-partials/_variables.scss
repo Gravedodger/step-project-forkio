@@ -35,6 +35,11 @@ $color__card__body: #5f5161;
 //******************
 //    RESOLUTIONS
 //******************
-$mobile: 320px;
-$tablet: 768px;
-$desktop: 1200px;
+$mobile-min: 320px;
+$mobile-max: 480px;
+
+$tablet-min: 481px;
+$tablet-max: 992px;
+
+$desktop-min: 993px;
+$desktop-max: 1200px;

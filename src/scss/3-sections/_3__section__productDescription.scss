@@ -13,11 +13,13 @@
     font: 15px $font-primary-regular;
     color: #848e97;
     text-transform: capitalize;
-    @media (min-width: $tablet) {
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       margin-top: 12px;
       padding-bottom: 94px;
     }
-    @media (min-width: $desktop) {
+
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
       padding: 0;
     }
   }
@@ -32,18 +34,16 @@
     text-transform: uppercase;
     text-align: center;
 
-    @media (min-width: $tablet) {                    // section__product-description__title -- MEDIA -- Tablet
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 558px;
-      height: 31px;
       font-size: 40px;
       padding-top: 0;
       padding-bottom: 38px;
     }
 
-    @media (min-width: $desktop) {                   // section__product-description__title -- MEDIA -- Desktop
-      width: 718px;
-      height: 40px;
-      font-size: 50px;
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+      width: 728px;
+      font-size: 54px;
       padding-top: 67px;
       margin: 0;
     }
@@ -60,7 +60,7 @@
     text-align: center;
     line-height: 19px;
     
-    @media (min-width: $tablet) {                   // section__product-description__text -- MEDIA -- Tablet
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 669px;
       height: 52px;
       font-size: 20px;
@@ -68,8 +68,10 @@
       padding-top: 0;
     }
     
-    @media (min-width: $desktop) {                  // section__product-description__text -- MEDIA -- Desktop
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+      font-size: 19px;
       width: 913px;
+      letter-spacing: +0.7px;
     }
   }
 
@@ -79,15 +81,16 @@
     height: 70px;
     margin-bottom: 88px;
 
-    @media screen and (min-width: $tablet) {      // section__product-description__widgets -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       flex-wrap: nowrap;
       width: 365px;
       height: 26px;
       justify-content: center;
       margin-bottom: 98px;
     }
-    @media screen and (min-width: $desktop) {    // section__product-description__widgets -- MEDIA -- Desktop
-      margin-bottom: 70px;
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+      display: flex;
+      flex-wrap: nowrap;
     }
   }
 }

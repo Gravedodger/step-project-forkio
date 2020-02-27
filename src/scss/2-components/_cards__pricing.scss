@@ -15,12 +15,12 @@
   background-size: cover;
   background-position: center;
 
-  @media screen and (min-width: $tablet) {                      // card -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                      // card -- MEDIA -- Tablet
     @include flex;
     width: 40%;
   }
 
-  @media screen and (min-width: $desktop) {                     // card -- MEDIA -- Desktop
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                     // card -- MEDIA -- Desktop
     @include flex-around;
     width: 18%;
   }
@@ -54,12 +54,12 @@
   margin: 38px 0;
 }
 
-  @media screen and (min-width: $tablet) {                    // card -- HOVER ==> MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                    // card -- HOVER ==> MEDIA -- Tablet
     background: rgba(255, 255, 255, 0.12);
     color: $color__general--white;
   }
 
-  @media screen and (min-width: $desktop) {                   // card -- HOVER ==> MEDIA -- Desktop
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                   // card -- HOVER ==> MEDIA -- Desktop
     color: $color__general--white;
     padding: 0 10px;
     margin: 0 7px;
@@ -75,14 +75,14 @@
     font: 23px $font-primary-regular;
     background: rgba(255, 255, 255, 0.25);
 
-    @media screen and (min-width: $tablet) {                  // card__head -- HOVER ==> MEDIA -- Desktop
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                  // card__head -- HOVER ==> MEDIA -- Desktop
       font-size: 22px;
       color: $color__general--white;
       background: rgba(255, 255, 255, 0.22);
       opacity: .8;
     }
 
-    @media screen and (min-width: $desktop) {                 // card__head -- HOVER ==> MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                 // card__head -- HOVER ==> MEDIA -- Desktop
       width: 260px;
       font-size: 22px;
     }

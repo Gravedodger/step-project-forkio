@@ -8,12 +8,12 @@
   @include flex-column;
   @include center_-_align_-_text;
 
-  @media screen and (max-width: 997px) {                 // section__offer -- MEDIA -- 997px
+  @media screen and (max-width: 997px) {
     position: relative;
     width: 100%;
   }
 
-  @media screen and (min-width: $desktop){              // section__offer -- MEDIA -- Desktop
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
     width: 40%;
     max-width: 1200px;
     margin-top: 100px;
@@ -27,17 +27,20 @@
     font: 30px $font-primary-bold;
     color: $color__primary--purple-light;
 
-    @media screen and (min-width: $tablet) {            // section__offer__sectionTitle -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 501px;
       height: 41px;
       font: 40px $font-primary-bold;
       margin-bottom: 60px;
     }
 
-    @media screen and (min-width: $desktop) {           // section__offer__sectionTitle -- MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       position: absolute;
       left: 52.5%;
       top: 1260px;
+      width: 572px;
+      height: 46px;
+      font-size: 46px;
     }
   }
 
@@ -46,7 +49,7 @@
     @include flex-column;
     max-width: 700px;
 
-    @media screen and (min-width: $tablet) {           // section__offer__mainContainer -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       position: relative;
       width: 100%;
       margin-left: 12px;
@@ -58,7 +61,7 @@
   &__item {
     padding-bottom: 37px;
 
-    @media screen and (min-width: $tablet) {           // section__offer__item -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       @include flex;
       height: 65px;
       margin-bottom: 34px;
@@ -68,19 +71,19 @@
     &__img {
       margin-bottom: 25px;
 
-      @media screen and (min-width: $tablet){           // section__offer__item_img -- MEDIA -- Tablet
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
         position: absolute;
         justify-content: space-around;
         flex: 0 0 0 134px;
       }
-      @media screen and (min-width: $desktop) {         // section__offer__item_img -- MEDIA -- Desktop
+      @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       }
     }
 
 
     &__text {
 
-      @media screen and (min-width: $tablet) {         // section__offer__item_text -- MEDIA -- Tablet
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
         position: absolute;
         margin-left: 124px;
       }
@@ -91,7 +94,7 @@
       font: 15px $font-primary-regular;
       padding-bottom: 18px;
 
-      @media screen and (min-width: $tablet){         // section__offer__item_title -- MEDIA -- Tablet
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
         font-size: 15px;
       }
     }
@@ -102,11 +105,11 @@
       font: 13px $font-secondary-regular;
       line-height: 19px;
 
-      @media screen and (min-width: $tablet) {         // section__offer__item_article -- MEDIA -- Tablet
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: 567px;
       }
 
-      @media screen and (min-width: $desktop) {        // section__offer__item_article -- MEDIA -- Desktop
+      @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
         width: 346px;
       }
     }
@@ -122,14 +125,14 @@
     background-repeat: no-repeat;
     background-size: 700px;
 
-    @media screen  and (min-width: $tablet) {        // section__offer__item_sideImage__container -- MEDIA -- Tablet
+    @media screen  and (min-width: $tablet-min) and (max-width: $tablet-max) {
       max-width: 977px;
       padding: 0 518px 519px 250px;
       margin-bottom: 30px;
       background-size: 980px;
     }
 
-    @media screen and (min-width: $desktop) {      // section__offer__item_sideImage__container -- MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       position: absolute;
       left: 51%;
       max-width: 1200px;

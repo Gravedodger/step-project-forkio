@@ -22,11 +22,11 @@
   background-color: #645766;
   border: none;
 
-  @media screen and (min-width: $tablet) {                      // SEPARATOR -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                      // SEPARATOR -- MEDIA -- Tablet
     width: 699px;
   }
 
-  @media screen and (min-width: $desktop) {                      // SEPARATOR -- MEDIA -- Desktop
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                      // SEPARATOR -- MEDIA -- Desktop
     width: 780px;
   }
 }

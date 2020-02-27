@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,10 @@
     <header class="header">
 
 <!--    /// *NAVBAR*                                                                                                 -->
-        <nav class="nav nav__flex-container">
+        <nav class="nav">
 
-            <div class="nav__flex-item">
+            <div class="nav__flex-container">
+
                 <a class="nav__logo__container" href="#">
                     <div class="nav__logo">
                         <img class="nav__logo__image"
@@ -25,52 +26,51 @@
                         <h2 class="nav__logo__text">forkio</h2>
                     </div>
                 </a>
-            </div>
 
-<!--        --- "Buy Now" button  -->
-            <div class="nav__flex-item">
-                <button class="btn__purple--buyNow">buy now</button>
-            </div>
+    <!--        --- "Buy Now" button  -->
+                <div class="nav__flex-item">
+                    <button class="btn__purple--buyNow">buy now</button>
+                </div>
 
-<!--        --- Main nav menu in Desktop & Tablet view modes -->
-            <div class="nav__flex-item">
+    <!--        --- Main nav menu in Desktop & Tablet view modes -->
                 <ul class="nav__menu">
                     <li><a href="#" class="nav__menu__links">overview</a></li>
                     <li><a href="#" class="nav__menu__links">about fork</a></li>
                     <li><a href="#" class="nav__menu__links">buying options</a></li>
                     <li><a href="#" class="nav__menu__links">support</a></li>
                 </ul>
-            </div>
 
-<!--        --- Hamburger menu icon -->
-            <div class="icn__hamburger--dropdown">
-                <div id="closeBtn" onclick="dropFunction()">
-                    <span class="line1"></span>
-                    <span class="line2"></span>
-                    <span class="line3"></span>
-                </div>
-
-<!--            --- dropdown main nav menu in Mobile view mode -->
-                <div id="dropList" class="dropdown-content">
-
-                    <div class="dropdown-content__links__container">
-                        <div class="dropdown-content__links__sideBox--purple"></div>
-                        <a class="dropdown-content__links" href="#"><p>overview</p></a>
+    <!--        --- Hamburger menu icon -->
+                <div class="icn__hamburger--dropdown">
+                    <div id="closeBtn" onclick="dropFunction()">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
                     </div>
 
-                    <div class="dropdown-content__links__container">
-                        <div class="dropdown-content__links__sideBox--purple"></div>
-                        <a class="dropdown-content__links" href="#"><p>about fork</p></a>
-                    </div>
+    <!--            --- dropdown main nav menu in Mobile view mode -->
+                    <div id="dropList" class="dropdown-content">
 
-                    <div class="dropdown-content__links__container">
-                        <div class="dropdown-content__links__sideBox--purple"></div>
-                        <a class="dropdown-content__links" href="#"><p>buying options</p></a>
-                    </div>
+                        <div class="dropdown-content__links__container">
+                            <div class="dropdown-content__links__sideBox--purple"></div>
+                            <a class="dropdown-content__links" href="#"><p>overview</p></a>
+                        </div>
 
-                    <div class="dropdown-content__links__container">
-                        <div class="dropdown-content__links__sideBox--purple"></div>
-                        <a class="dropdown-content__links" href="#"><p>support</p></a>
+                        <div class="dropdown-content__links__container">
+                            <div class="dropdown-content__links__sideBox--purple"></div>
+                            <a class="dropdown-content__links" href="#"><p>about fork</p></a>
+                        </div>
+
+                        <div class="dropdown-content__links__container">
+                            <div class="dropdown-content__links__sideBox--purple"></div>
+                            <a class="dropdown-content__links" href="#"><p>buying options</p></a>
+                        </div>
+
+                        <div class="dropdown-content__links__container">
+                            <div class="dropdown-content__links__sideBox--purple"></div>
+                            <a class="dropdown-content__links" href="#"><p>support</p></a>
+                        </div>
+
                     </div>
                 </div>
             </div>

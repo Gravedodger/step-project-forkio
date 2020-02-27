@@ -16,16 +16,20 @@
     @extend .btn__purple;
     padding: 9px 24px;
     font: 15px $font-primary-bold;
-    width: 119px;
-    height: 37px;
 
-    @media (min-width: $tablet) {                   // Buy Now -- MEDIA -- Tablet
-      width: 145px;
-      height: 38px;
+    &:hover {
+      color: $color__primary--purple-light;
+      background-color: $color__general--white;
     }
 
-    @media (min-width: $desktop) {                  // Buy Now -- MEDIA -- Tablet
-      right: 90px;
+    @media (min-width: $tablet-min) and (max-width: $desktop-max) {
+      width: 145px;
+      height: 38px;
+      margin-left: 380px;
+    }
+
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+      margin: 0;
     }
   }
 
@@ -35,18 +39,15 @@
     height: 45px;
     font: 18px $font-primary-bold;
 
-    &:hover {                                             // Download Now -- HOVER
+    &:hover {
       color: $color__primary--purple-light;
       background-color: $color__general--white;
     }
 
-    @media (min-width: $tablet) {                         // Download Now -- MEDIA -- Tablet
+    @media (min-width: $tablet-min) and (max-width: $desktop-max) {
       width: 390px;
       height: 62px;
       font-size: 15px;
-    }
-
-    @media (min-width: $desktop) {                        // Download Now -- MEDIA -- Tablet
     }
   }
 }
@@ -61,13 +62,13 @@
   outline: 0;
   transition: 0.6s;
 
-  &--cardActive {                                   // Purchase  -- STATE -- active
+  &--cardActive {
     width: 190px;
     height: 52px;
     background-color: #5d5160;
   }
 
-  &:hover {                                          // Purchase  -- HOVER
+  &:hover {
     color: #7f6d78;
     background-color: #c8c3c8;
   }

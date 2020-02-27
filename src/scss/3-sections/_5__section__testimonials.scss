@@ -12,13 +12,13 @@
   background: url("/dist/images--optimized/bg/bg__footer__top.png") no-repeat;
   background-size: cover;
 
-  @media screen and (min-width: $tablet) {                            // section__testimonials -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                            // section__testimonials -- MEDIA -- Tablet
     padding: 79px 19px 0 19px;
     background-image: url("/dist/images--optimized/bg/bg__footer__top--viewDesktop.png");
     background-size: 768px 946px;
   }
 
-    @media screen and (min-width: $desktop) {                         // section__testimonials -- MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                         // section__testimonials -- MEDIA -- Desktop
       background-size: 1200px 794px;
     }
 
@@ -26,11 +26,11 @@
 
   &__mainContainer {
 
-    @media screen and (min-width: $tablet) {               // section__testimonials__mainContainer -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {               // section__testimonials__mainContainer -- MEDIA -- Tablet
 
     }
 
-    @media screen and (min-width: $desktop) {             // section_testimonials__mainContainer -- MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {             // section_testimonials__mainContainer -- MEDIA -- Desktop
       max-width: 1200px;
     }
   }
@@ -50,7 +50,7 @@
       padding-bottom: 96px;
     }
 
-    @media screen and (min-width: $desktop) {               // section_testimonials__title -- MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {               // section_testimonials__title -- MEDIA -- Desktop
       font-size: 42px;
       line-height: 1em;
     }
@@ -59,7 +59,7 @@
   &__smallprint {
     display: none;
 
-    @media screen and (min-width: $tablet) {                // section_testimonials__smallprint -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                // section_testimonials__smallprint -- MEDIA -- Tablet
       display: inline-block;
       @include center_-_align_-_text;
       padding-bottom: 6px;
@@ -70,7 +70,7 @@
       font: 14px $font-secondary-regular;
     }
 
-    @media screen and (min-width: $desktop) {                // section_testimonials__smallprint -- MEDIA -- Desktop
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                // section_testimonials__smallprint -- MEDIA -- Desktop
       width: 857px;
       height: 35px;
     }
@@ -80,13 +80,13 @@
 
 .testimonials__itemsContainer {
 
-  @media screen and (min-width: $tablet) {                   // testimonials__itemsContainer -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                   // testimonials__itemsContainer -- MEDIA -- Tablet
     @include flex-between;
     @include flex-between;
     width: 100%;
   }
 
-  @media screen and (min-width: $desktop) {                   // testimonials__itemsContainer -- MEDIA -- DESKTOP
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                   // testimonials__itemsContainer -- MEDIA -- DESKTOP
   }
 }
 
@@ -101,11 +101,11 @@
   padding-bottom: 41px;
 
 
-  @media screen and (min-width: $tablet) {                   // testimonials__item -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                   // testimonials__item -- MEDIA -- Tablet
 
   }
 
-  @media screen and (min-width: $desktop) {                   // testimonials__item -- MEDIA -- Desktop
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                   // testimonials__item -- MEDIA -- Desktop
 
   }
 
@@ -115,7 +115,7 @@
     font: 16px $font-secondary-boldItalic;
     line-height: 24px;
 
-    @media screen and (min-width: $tablet) {                  // testimonials__item__quote -- MEDIA -- Tablet
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                  // testimonials__item__quote -- MEDIA -- Tablet
       width: 315px;
     }
   }

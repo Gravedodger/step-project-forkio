@@ -6,13 +6,13 @@
   @include center_-_align_-_text;
   background-color: $color__background__footer__bottom;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     background: url("/dist/images--optimized/bg/bg__footer__bottom--viewDesktop.png") no-repeat;
     background-size: cover;
     flex-direction: row;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
     @include flex-center;
     width: 100%;
   }
@@ -28,11 +28,11 @@
     line-height: 40px;
     color: $color__general--white;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       font-size: 42px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       font-size: 46px;
       padding-bottom: 12%;
     }
@@ -48,7 +48,7 @@
     margin-bottom: 3%;
     color: $color__general--white;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       @include flex-center;
       @include center_-_align_-_text;
       justify-content: space-evenly;
@@ -57,7 +57,7 @@
 
     }
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       @include flex;
       width: 96%;
       justify-content: space-evenly;

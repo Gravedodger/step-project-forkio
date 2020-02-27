@@ -4,34 +4,57 @@
                                   //   S E C T I O N  -- N A V  &  M A I N / D R O P  M E N U
 
 .nav {
-  @include flex-between;
-  height: 103px;
-  flex-wrap: wrap;
-  background-color: #27262a;
+  @include flex;
+  @include center_-_align;
+  min-height: 103px;
   text-transform: capitalize;
-  align-items: center;
+  background-color: $color__background__navbar;
+
+  &__flex-container {
+    @include flex-around;
+    width: 100%;
+
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+        @include flex-between;
+        padding: 0 90px;
+
+        .nav__flex-item:nth-of-type(1) { order: 1; }
+        .nav__flex-item:nth-of-type(2) { order: 3; }
+        .nav__flex-item:nth-of-type(3) { order: 2; }
+    }
+  }
+
+  &__flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font: 16px $font-primary-bold;
+  }
 
   &__menu {
     display: none;
+
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+      display: flex;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+      margin-left: 100px;
+    }
   }
 
-  @media screen and (min-width: $mobile) {                      // NAV__MENU -- MEDIA -- Mobile
-    padding: 0 16px;
-  }
-
-  @media screen and (min-width: $tablet) {                      // NAV__MENU -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-max) {
+    height: 118px;
 
     .icn__hamburger--dropdown {
       display: none;
     }
 
-    .btn__purple--buyNow {
-    }
-
     &__menu {
       @include flex-between;
-      margin-left: 80px;
-
+      align-items: center;
 
       &__links {
         display: flex;
@@ -40,24 +63,10 @@
         font: 17px $font-primary-bold;
         color: $color__primary--purple-light;
 
-        &:hover {                                              // NAV__MENU__LINKS -- HOVER
+        &:hover {
           color: $color__general--white;
         }
       }
-    }
-  }
-
-
-  @media screen and (min-width: $desktop) {                    // NAV__MENU -- MEDIA -- Desktop
-    &__flex-container {
-      display: flex;
-      flex-flow: row wrap;
-      flex-direction: row;
-      padding: 0 90px;
-
-      .nav__flex-item:nth-of-type(1) { order: 1; }
-      .nav__flex-item:nth-of-type(2) { order: 3; }
-      .nav__flex-item:nth-of-type(3) { order: 2; }
     }
   }
 }
