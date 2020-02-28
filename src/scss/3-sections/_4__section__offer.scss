@@ -14,17 +14,15 @@
   }
 
   @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
-    width: 40%;
     max-width: 1200px;
-    margin-top: 100px;
+    width: 40%;
+    margin-bottom: 40px;
   }
 
-
   &__sectionTitle {
-    width: 227px;
-    height: 70px;
+    width: 237px;
     margin-bottom: 34px;
-    font: 30px $font-primary-bold;
+    font: 32px $font-primary-bold;
     color: $color__primary--purple-light;
 
     @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -35,15 +33,14 @@
     }
 
     @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
-      position: absolute;
-      left: 52.5%;
-      top: 1260px;
-      width: 572px;
+      position: relative;
+      width: 571px;
+      left: 580px;
+      bottom: 20px;
       height: 46px;
       font-size: 46px;
     }
   }
-
 
   &__mainContainer {
     @include flex-column;
@@ -55,8 +52,11 @@
       margin-left: 12px;
       text-align: left;
     }
-  }
 
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+      width: 84%;
+    }
+  }
 
   &__item {
     padding-bottom: 37px;
@@ -67,8 +67,13 @@
       margin-bottom: 34px;
     }
 
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+      position: relative;
+      text-align: left;
+      justify-content: center;
+    }
 
-    &__img {
+      &__img {
       margin-bottom: 25px;
 
       @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -77,28 +82,40 @@
         flex: 0 0 0 134px;
       }
       @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+        width: 50%;
+        margin: 0;
       }
     }
 
-
     &__text {
-
       @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
         position: absolute;
         margin-left: 124px;
       }
-    }
 
+      @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+        width: 350px;
+      }
+    }
 
     &__title {
       font: 15px $font-primary-regular;
+      font-weight: 600;
       padding-bottom: 18px;
 
       @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
         font-size: 15px;
       }
-    }
 
+      @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+        position: absolute;
+        top: -16px;
+        padding-bottom: 7px;
+        font: 15px $font-primary-regular;
+        font-weight: 600;
+        padding-left: 120px;
+      }
+    }
 
     &__article {
       width: 270px;
@@ -110,11 +127,15 @@
       }
 
       @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+        position: absolute;
+        left: 60px;
         width: 346px;
+        font: 14px $font-primary-regular;
+        padding-left: 60px;
+        top: 12px;
       }
     }
   }
-
 
   &__sideImage__container {
     position: relative;
@@ -134,9 +155,32 @@
 
     @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       position: absolute;
-      left: 51%;
-      max-width: 1200px;
-      padding: 130px 595px 347px 0;
+      left: 46%;
+      padding: 120px 660px 347px 0;
+      background-image: url("/dist/images--optimized/bg/bg__sectOffer__IDE--side--desktop.png");
+      background-size: 600px;
+      background-position: center;
     }
   }
+}
+
+
+#icn1 {
+  width: 111px;
+  height: 64px;
+}
+
+#icn2 {
+  width: 90px;
+  height: 80px;
+}
+
+#icn3 {
+  width: 60px;
+  height: 84px;
+}
+
+#icn4 {
+  width: 71px;
+  height: 71px;
 }

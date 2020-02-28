@@ -54,18 +54,42 @@
 
 .btn__purchase {
   @include button__rounded;
+  position: relative;
+  top: 25px;
   width: 160px;
   height: 42px;
+  font-size: 15px;
   color: $color__general--white;
   text-transform: uppercase;
   background-color: #776b79;
   outline: 0;
   transition: 0.6s;
 
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    
+  }
+
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+
+  }
+
   &--cardActive {
+    @include button__rounded;
+    position: absolute;
+    bottom: 40px;
+    left: 34px;
     width: 190px;
     height: 52px;
-    background-color: #5d5160;
+    color: $color__general--white;
+    text-transform: uppercase;
+    font: 15px $font-primary-regular;
+    padding: 5% 0;
+    background: rgba(255,255,255,.15);
+
+    &:hover {
+      color: #7f6d78;
+      background-color: #c8c3c8;
+    }
   }
 
   &:hover {

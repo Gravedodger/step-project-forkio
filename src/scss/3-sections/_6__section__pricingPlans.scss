@@ -1,6 +1,8 @@
 @import "src/scss/1-partials/variables";
 @import "src/scss/1-partials/mixins";
 
+                                        //   S E C T I O N  -- P R I C I N G  P L A N S
+
 .section__pricingPlans {
   @include flex-column;
   @include center_-_align_-_text;
@@ -17,9 +19,6 @@
     width: 100%;
   }
 
-
-  //////   SECTION TITLE    ////////
-
   &__sectionTitle {
     padding: 8% 0 5% 0;
     font: 26px $font-primary-bold;
@@ -34,46 +33,35 @@
 
     @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       font-size: 46px;
-      padding-bottom: 12%;
+      padding: 1% 0 5% 0;
     }
   }
 
-
-
- //////   MAIN CONTAINER    ////////
   &__mainContainer {
     @include flex-column;
     @include center_-_align_-_text;
     width: 80%;
-    margin-bottom: 3%;
+    margin-bottom: 30%;
     color: $color__general--white;
 
     @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       @include flex-center;
       @include center_-_align_-_text;
+      width: 78%;
       justify-content: space-evenly;
       flex-direction: row;
       flex-wrap: wrap;
-
+      margin-bottom: 15%;
     }
 
     @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
       @include flex;
       width: 96%;
-      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 8%;
       padding-right: 50px;
     }
   }
-}
-
-.btn__purchase {
-  width: 62%;
-  font: 11px $font-primary-regular;
-  padding: 5% 0;
-  background: rgba(255,255,255,.15);
-}
-
-.btn__purchase__alt {
-  bottom: -18px;
 }

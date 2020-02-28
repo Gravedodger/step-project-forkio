@@ -1,4 +1,8 @@
 
+// !!! Мне пришлось использовать "var" вместо "const" и "let", так как gulp не хотел компелировать с ними.
+// Я честно не хотел использовать "var" :-(
+
+
     ////*************************
     //// 1. FUNCTIONS FOR BUTTONS
     ////*************************
@@ -31,3 +35,35 @@ window.onclick = function(event) {
                 openDropdown.classList.remove('show');
             }
         }}};
+
+
+    ////*****************************
+    //// 2. FUNCTION FOR COUNT BUTTON
+    ////*****************************
+
+   var addCountWatch = (function () {
+       var counter = 0;
+       return function () {return counter += 1;}
+   })();
+
+    var addCountFavour = (function () {
+        var counter = 0;
+        return function () {return counter += 1;}
+    })();
+
+    var addCountFork = (function () {
+        var counter = 0;
+        return function () {return counter += 1;}
+    })();
+
+    function countWatch() {
+        document.getElementById("watch").innerHTML = addCountWatch();
+    }
+
+    function countFav() {
+        document.getElementById("fav").innerHTML = addCountFavour();
+    }
+
+    function countFork() {
+        document.getElementById("fork").innerHTML = addCountFork();
+    }

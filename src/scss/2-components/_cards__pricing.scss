@@ -7,26 +7,23 @@
                                         //////
 
 .pricingPlan__card {
-  @include flex-center;
-  @include flex-column;
-  width: 100%;
-  margin-bottom: 3%;
+  margin-top: 14px;
   text-transform: uppercase;
-  background-size: cover;
-  background-position: center;
 
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                      // card -- MEDIA -- Tablet
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     @include flex;
-    width: 40%;
+    width: 250px;
   }
 
-  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                     // card -- MEDIA -- Desktop
-    @include flex-around;
-    width: 18%;
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+    @include flex-between;
+    flex-wrap: wrap;
+    width: 20%;
   }
 
   &__price {
     font: 60px $font-primary-regular;
+    margin-top: 32px;
   }
 
   span {
@@ -45,54 +42,135 @@
     text-transform: capitalize;
     line-height: 25px;
   }
-}
 
+  &--active {
+    @include flex-column;
+    margin: 44px 0;
+    width: 100%;
+    height: 560px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: scale(1.13);
 
-.pricingPlan__card:hover {                                    // card -- HOVER
-  transform: scale(1.1);
-  transition-duration: 1.1s;
-  margin: 38px 0;
-}
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+      @include flex;
+      position: relative;
+      left: -12px;
+      width: 270px;
+      height: 560px;
+      margin-top: 80px;
+    }
 
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                    // card -- HOVER ==> MEDIA -- Tablet
+    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+      @include flex;
+      width: 25%;
+      padding: 0 20px;
+      transform: none;
+    }
+
+    &__head {
+      width: 100%;
+      padding: 51px 0 43px 0;
+      font: 24px $font-primary-regular;
+      line-height: 15px;
+      text-transform: uppercase;
+
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 270px;
+        background: rgba(255, 255, 255, 0.083);
+      }
+
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+      }
+    }
+
+    &__body {
+      height: 449px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.03);
+
+      @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+        position: relative;
+        width: 270px;
+        background: none;
+      }
+      //
+      @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+        background-size: cover;
+        width: 100%;
+      }
+    }
+
+      &__price {
+        margin-top: 32px;
+        font: 82px $font-primary-bold;
+      }
+
+      &--perMonth {
+        font: 14px $font-primary-regular;
+        color: $color__primary--purple-light;
+        opacity: 0.6;
+      }
+
+      &__licensePlan {
+        margin-top: 31px;
+        line-height: 1.8;
+      }
+  }
+
+  .usd {
+    font-family: $font-primary-regular;
+  }
+
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     background: rgba(255, 255, 255, 0.12);
     color: $color__general--white;
   }
 
-  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                   // card -- HOVER ==> MEDIA -- Desktop
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
     color: $color__general--white;
-    padding: 0 10px;
-    margin: 0 7px;
+    margin: 0 15px;
+    background-color: rgba(255, 255, 255, 0.0011);
   }
-
-
+}
 
 .pricingPlan__card__head {
-    @include flex-center;
-    @include center_-_align_-_text;
-    height: 5em;
-    text-transform: uppercase;
-    font: 23px $font-primary-regular;
-    background: rgba(255, 255, 255, 0.25);
+  @include flex-center;
+  @include center_-_align_-_text;
+  height: 5em;
+  text-transform: uppercase;
+  font: 23px $font-primary-regular;
+  background: rgba(255, 255, 255, 0.25);
 
-    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {                  // card__head -- HOVER ==> MEDIA -- Desktop
-      font-size: 22px;
-      color: $color__general--white;
-      background: rgba(255, 255, 255, 0.22);
-      opacity: .8;
-    }
-
-    @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {                 // card__head -- HOVER ==> MEDIA -- Desktop
-      width: 260px;
-      font-size: 22px;
-    }
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: 257px;
+    font-size: 22px;
+    color: $color__general--white;
+    background: rgba(255, 255, 255, 0.044);
   }
 
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+    width: 260px;
+    font-size: 22px;
+  }
+}
 
 .pricingPlan__card__body {
-    @include flex-column;
-    @include flex-around;
-    @include center_-_align_-_text;
-    height: 20em;
-    background: rgba(255, 255, 255, 0.15);
+  @include flex-column;
+  width: 257px;
+  height: 360px;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    background: none;
   }
+
+  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+  }
+}
+
+#abc {
+  visibility: hidden;
+}

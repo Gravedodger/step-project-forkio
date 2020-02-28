@@ -29,7 +29,7 @@
     width: 236px;
     height: 60px;
     padding-top: 72px;
-    font: 25px $font-primary-bold;
+    font: 27px $font-primary-bold;
     color: $color__primary--purple-dark;
     text-transform: uppercase;
     text-align: center;
@@ -77,7 +77,7 @@
 
   &__widgets {
     @include flex-around;
-    width: 252px;
+    width: 242px;
     height: 70px;
     margin-bottom: 88px;
 
